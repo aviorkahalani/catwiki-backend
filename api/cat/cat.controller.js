@@ -2,8 +2,8 @@ const catService = require('./cat.service')
 
 module.exports = {
   getBreeds,
-  getBreed,
-  getBreedImages,
+  getBreedById,
+  getImagesByBreedId,
 }
 
 async function getBreeds(req, res) {
@@ -15,20 +15,22 @@ async function getBreeds(req, res) {
   }
 }
 
-async function getBreed(req, res) {
+async function getBreedById(req, res) {
   try {
     const { breedId } = req.params
-    const breed = await catService.getBreed(breedId)
+
+    const breed = await catService.getBreedById(breedId)
+    console.log('breed :>> ', breed)
     res.json(breed)
   } catch (err) {
     res.status(500).send({ err: 'Failed to get breed' })
   }
 }
 
-async function getBreedImages(req, res) {
+async function getImagesByBreedId(req, res) {
   try {
     const { breedId } = req.params
-    const images = await catService.getBreedImages(breedId)
+    const images = await catService.getImagesByBreedId(breedId)
     res.json(images)
   } catch (err) {
     res.status(500).send({ err: 'Failed to get cat images' })

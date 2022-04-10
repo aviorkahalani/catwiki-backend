@@ -1,9 +1,9 @@
 const express = require('express')
-const { getBreeds, getBreed, getBreedImages } = require('./cat.controller')
+const { getBreeds, getBreedById, getImagesByBreedId } = require('./cat.controller')
 const router = express.Router()
 
-router.get('/breeds', getBreeds)
-router.get('/breed/:breedId', getBreed)
-router.get('/breed/image/:breedId', getBreedImages)
+router.get('/', getBreeds)
+router.get('/:breedId', getBreedById)
+router.get('/image/:breedId', getImagesByBreedId)
 
 module.exports = router
