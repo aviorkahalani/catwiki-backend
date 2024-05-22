@@ -46,7 +46,7 @@ Make sure you have the following installed:
     ```
 
     ```bash
-    cd CatWiki
+    cd catwiki-backend
     ```
 
 2.  _Install dependencies:_
