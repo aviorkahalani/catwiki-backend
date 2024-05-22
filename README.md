@@ -11,9 +11,6 @@ Welcome to _CatWiki_! This app is your ultimate guide to exploring and browsing 
   - [Installation](#installation)
 - [Usage](#usage)
 - [Screenshot](#screenshot)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
 
 ## Features
 
